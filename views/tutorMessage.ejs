@@ -1,0 +1,38 @@
+<%- include ("partials/header.ejs") %>
+
+
+
+ 
+<form  class="ui form" action = '/message/<%= results %>' method = 'post'>
+	<div>
+  <div class="field">
+    <label>Message</label>
+    <input type="text" name = "message">
+    <button>Send</button>
+  </div>
+</div>
+</form>
+
+
+  <% result.forEach(function(results){ %>
+  	
+  <div class="ui feed">
+  	<%= results.name %>
+  <div class="event">
+    <div class="label">
+    </div>
+    <div class="content">
+      <%= results.message %>
+    </div>
+  </div>
+</div>
+
+  	<br>
+
+
+  <% }); %>
+
+
+
+
+<%- include ("partials/footer.ejs") %>

@@ -1,0 +1,10 @@
+<%- include ("partials/header.ejs") %>
+
+<% result.forEach(function(results){ %>
+
+
+<h4><%= results.name %><a href = '/message/<%- results.id %>'><i class="envelope outline icon"></i></a></h4>
+  <% }); %>
+
+
+<%- include ("partials/footer.ejs") %>

@@ -1,0 +1,29 @@
+<%- include ("partials/header.ejs") %>
+
+<form class="ui form" action = '/signUpTutors' method = 'post'>
+  <div class="field">
+    <label>Name</label>
+    <input type="text" name="name" placeholder="First Name">
+  </div>
+  <div class="field">
+    <label>Age</label>
+    <input type="text" name="age" placeholder="Last Name">
+  </div>
+  <div class="field">
+    <label>Linked In Link</label>
+    <input type="text" name="link" placeholder="LinkedIn">
+  </div>
+  <div class="field">
+    <label>Short Text</label>
+    <textarea rows="2" style="margin-top: 0px; margin-bottom: 0px; height: 89px;" name = 'message'></textarea>
+  <div class="field">
+  	<br>
+    <div class="ui checkbox">
+     
+      
+    </div>
+  </div>
+  <button class="ui button" type="submit">Submit</button>
+</form>
+
+<%- include ("partials/footer.ejs") %>

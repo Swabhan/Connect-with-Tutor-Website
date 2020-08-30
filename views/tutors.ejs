@@ -1,0 +1,30 @@
+<%- include ("partials/header.ejs") %>
+
+<a href = '/signUpTutors' style = 'margin-bottom: 2%'>Sign Up As A Tutor</a>
+
+<% result.forEach(function(results){ %>
+
+
+<div class="ui comments" style='margin-top: 5%'>
+  <div class="comment">
+    <a class="avatar">
+    </a>
+    <div class="content">
+      <a class="author"><%= results.name %></a>
+      <div class="metadata">
+        <span class="date"><%= results.age %>  <a href = '<%- results.linkedin %>'><i style = 'color: blue' class="linkedin icon"></i></a></span>
+      </div>
+      <div class="text">
+        <%= results.message %>
+      </div>
+      <div class="actions">
+        <a class="reply"><a class="reply" href = '/message/<%=results.id%>'>Message</a></a>
+      </div>
+    </div>
+   
+      
+</div>
+  <% }); %>
+
+
+<%- include ("partials/footer.ejs") %>
